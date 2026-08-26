@@ -1,0 +1,17 @@
+1.1
+1. Nej
+2. Nej
+3. Nej
+
+1.2
+Ustruktureret data og data der kræver fortolkning.
+Fordi der ikke findes en fast regel eller SQL-forespørgsel,
+der kan aflæse et billede, en lyd eller en tone.
+
+1.3
+Skiftet fra én maskine til et cluster.
+
+1.4
+Filen deles i blokke af 128 MB, hver blok gemmes i 3 kopier
+på forskellige noder. NameNode har metadata, DataNodes har
+data. Beregningen flyttes hen til data, ikke omvendt.

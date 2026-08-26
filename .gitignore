@@ -1,0 +1,17 @@
+cd ~
+cat > .gitignore << 'SLUT'
+hadoop-3.5.0/
+hadoop-3.5.0.tar.gz
+spark-env/
+tmpdata/
+dfsdata/
+secret.key
+*.enc
+__pycache__/
+.bash_history
+.vscode-server/
+.cache/
+.local/
+.ssh/
+.gitconfig
+SLUT

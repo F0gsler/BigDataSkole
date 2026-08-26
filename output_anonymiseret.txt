@@ -1,0 +1,10 @@
+ANONYMISERET DATASAET
+Personer efter filter: 91
+Personer i resultatet: 6
+Undertrykt af hensyn til K-anonymitet (K=3): 85
+
+Ingen mapping-fil findes. Resultatet kan ikke foeres tilbage
+til den enkelte person.
+
+Switzerland               female    40-49       3
+Australia                 male      50-59       3

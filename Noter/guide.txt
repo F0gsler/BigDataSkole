@@ -1,0 +1,82 @@
+DAG 1
+For oprette en folder gør du sådan her:
+hdfs dfs -mkdir /"FIL NAVN"
+
+Sådan tjekker du at folder er Oprettet til din haddoop maskine:
+hdfs dfs -ls /
+
+For upioad filer til HDFS fra linux fil systemet gør man dette:
+hdfs dfs -put ~/FOLDER/FIL.FILTYPE /FOLDER/
+                 ^^^^               ^^^^
+    Hvilken fil der skal ind        Hvor filen skal placeres
+
+DAG 2
+
+Start systemet:
+start-dfs.sh
+start-yarn.sh
+
+Tjek at det kører:
+jps
+
+Aktivér Python miljøet (i hver ny terminal):
+source ~/spark-env/bin/activate
+
+Læg data i HDFS:
+hdfs dfs -put ~/opgave/christmascarol.txt /input_dir/
+
+
+ØVELSE 1 - BATCH:
+python ./wordCount.py
+hdfs dfs -cat /output/output.txt/part-00000 | head -15
+
+
+ØVELSE 2 - REAL-TIME (2 terminaler):
+Terminal 1:  python ./realtime.py
+Terminal 2:  hdfs dfs -cp /input_dir/christmascarol.txt /input_dir/test.txt
+
+Læs resultatet:
+hdfs dfs -cat /output/test_output.txt/part-00000 | head -15
+
+
+ØVELSE 3 - MAPREDUCE:
+python3 ./mapperReducer.py
+hdfs dfs -cat /output/mapreduce_output.txt | head -15
+
+
+Slet output før ny kørsel:
+hdfs dfs -rm -r /output/output.txt
+
+Stop systemet:
+stop-yarn.sh
+stop-dfs.sh
+
+DAG 3
+
+Installer modulerne (kun første gang):
+source ~/spark-env/bin/activate
+pip install requests cryptography
+
+Kør script 1 - pseudonymisering:
+python ~/pseudoPipeline.py
+
+Kør script 2 - anonymisering:
+python ~/anonPipeline.py
+
+Vis den krypterede fil:
+head -c 200 ~/raw_users.enc
+
+Vis resultaterne:
+head -20 ~/output_pseudonymiseret.txt
+head -20 ~/output_anonymiseret.txt
+
+Vis forskellen på de to typer:
+ls -la ~
+^^^^
+mapping_pseudonym.enc findes kun efter script 1
+
+Hvor krypteres der i koden:
+open(RAW_ENC, "wb").write(Fernet(noegle).encrypt(svar.content))
+
+Hvor dekrypteres der i koden:
+raadata = json.loads(Fernet(noegle).decrypt(open(RAW_ENC, "rb").read()))
