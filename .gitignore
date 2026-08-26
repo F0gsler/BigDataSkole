@@ -10,9 +10,11 @@ secret.key
 __pycache__/
 .bash_history
 .vscode-server/
+.git-credentials/
 .cache/
 .local/
 .ssh/
-.gitconfig
+.gitconfig/
 SLUT.git-credentials
 .lesshst
+.git-credentials

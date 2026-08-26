@@ -1,7 +1,9 @@
 1.1
-1. Nej
-2. Nej
-3. Nej
+1. Nej - få bytes i minuttet, ét struktureret talfelt.
+2. Nej - 20 MB der overskrives dagligt vokser aldrig, én batch i døgnet.
+3. Nej - få tusinde rækker, én gang dagligt, fast struktur.
+
+Ingen af dem overstiger hvad én maskine kan klare.
 
 1.2
 Ustruktureret data og data der kræver fortolkning.
