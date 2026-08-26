@@ -15,6 +15,22 @@ __pycache__/
 .local/
 .ssh/
 .gitconfig/
-SLUT.git-credentials
+.git-credentials
 .lesshst
 .git-credentials
+.copilot/
+.landscape/
+.gitconfig
+.bashrc
+.profile
+.bash_logout
+.motd_shown
+cat >> ~/.gitignore << 'SLUT'
+.copilot/
+.landscape/
+.gitconfig
+.bashrc
+.profile
+.bash_logout
+.motd_shown
+SLUT

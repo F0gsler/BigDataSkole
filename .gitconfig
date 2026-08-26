@@ -1,7 +1,0 @@
-[user]
-	name = MariusF
-	email = marius.ulslev.fogelgren@gmail.com
-[credential]
-	helper = store
-[pull]
-	rebase = false
